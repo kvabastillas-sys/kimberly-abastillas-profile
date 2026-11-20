@@ -1,0 +1,268 @@
+/* ===== Base: background, text color, font (rem units) ===== */
+html {
+    font-size: 100%; /* 1rem = 16px by default, so users can still resize text */
+    scroll-behavior: smooth; /* nav links glide to their section */
+}
+
+body {
+    background-color: #FDE7EA;
+    color: #4A2A30;
+    font-family: Verdana, Arial, sans-serif; /* font fallbacks */
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 1.5rem 1rem;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #9B3552;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0 0 0.25rem 0;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== Navigation menu (flexbox) ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 50rem;
+    margin: 0 auto 1.5rem auto;
+    padding: 0.75rem 1.5rem;
+    background-color: #9B3552;
+    border-radius: 2rem;
+    box-shadow: 0 4px 10px rgba(155, 53, 82, 0.35);
+}
+
+.nav-brand {
+    background-color: #FFF8F8;
+    color: #9B3552;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 0 0 0.5rem;
+}
+
+.nav-links a {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    color: #FFF8F8;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect: link turns into a light pill */
+.nav-links a:hover {
+    background-color: #FFF8F8;
+    color: #9B3552;
+}
+
+/* ===== Header ===== */
+header {
+    max-width: 50rem;
+    margin: 0 auto 1.5rem auto;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* ===== Box model: padding, border, margin on each section ===== */
+main {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #FFF8F8;
+    padding: 1.5rem;
+    border: 2px solid #F2A9A3;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(155, 53, 82, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: the box lifts and the shadow grows */
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(155, 53, 82, 0.3);
+}
+
+/* ===== Flexbox: photo next to bio ===== */
+.about {
+    display: flex;
+    align-items: flex-start;
+}
+
+.about p {
+    flex: 1;
+    margin: 0;
+}
+
+.photo {
+    flex: 0 0 11rem;      /* fixed width, does not shrink */
+    height: 11rem;
+    width: 11rem;
+    margin-right: 1.5rem;
+    padding: 0;
+    box-sizing: border-box;
+    border: 3px solid #9B3552;
+    border-radius: 50%;
+    background-color: #F9CFD5;
+    color: #6B3A43;
+    font-size: 0.9rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;    /* keeps a real photo from stretching */
+    box-shadow: 0 4px 10px rgba(155, 53, 82, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+/* ===== Passion Projects: stacked cards (class selectors) ===== */
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card {
+    background-color: #FDE7EA;
+    padding: 1rem;
+    border: 2px solid #F2A9A3;
+    border-left: 6px solid #E8837D;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 8px rgba(155, 53, 82, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(155, 53, 82, 0.3);
+}
+
+.project-card:last-child {
+    margin-bottom: 0;
+}
+
+.project-card p {
+    margin: 0;
+}
+
+.project-card .project-date {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #6B3A43;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== Lists and links ===== */
+ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: #A02B4D;
+}
+
+a:hover {
+    color: #7A1F3D;
+}
+
+/* ===== Footer ===== */
+footer {
+    max-width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6B3A43;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+/* ===== Media query: stack the layout on small screens ===== */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        border-radius: 1.5rem;
+    }
+
+    .nav-brand {
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
